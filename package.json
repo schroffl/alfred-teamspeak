@@ -1,0 +1,27 @@
+{
+  "name": "alfred-teamspeak",
+  "version": "2.1.3",
+  "description": "Teamspeak 3 Bot Framework",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schroffl/alfred-teamspeak.git"
+  },
+  "keywords": [
+    "teamspeak"
+  ],
+  "author": "schroffl",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/schroffl/alfred-teamspeak/issues"
+  },
+  "homepage": "https://github.com/schroffl/alfred-teamspeak#readme",
+  "dependencies": {
+    "async": "^1.5.2",
+    "exec-stack": "^1.0.0",
+    "node-teamspeak": "^1.0.10"
+  }
+}
