@@ -35,7 +35,7 @@ The name of the bot
 #### <a name="option-host"></a>host *= 127.0.0.1*
 The host to connect to
 
-#### <a name="option-port"></a>host *= 10011*
+#### <a name="option-port"></a>port *= 10011*
 The port on which your Teamspeak Query is listening
 
 #### <a name="option-login-name"></a>loginName *= serveradmin*
