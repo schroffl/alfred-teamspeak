@@ -1,4 +1,4 @@
-# Alfred
+# Alfred [![npm version](https://badge.fury.io/js/alfred-teamspeak.svg)](https://badge.fury.io/js/alfred-teamspeak)
 A Teamspeak 3 Bot Framework utilizing the [Teamspeak ServerQuery](http://forum.teamspeak.com/threads/91465-How-to-use-the-Server-Query)
 
 ## Installation
