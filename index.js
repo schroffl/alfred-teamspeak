@@ -3,7 +3,7 @@
 const Alfred = require('./lib/index');
 const User = require('./lib/user');
 
-module.exports = class AlfredComplete extends Alfred {
+module.exports = class extends Alfred {
 
 	constructor(options) {
 		super(options);
