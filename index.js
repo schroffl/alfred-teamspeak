@@ -13,3 +13,4 @@ module.exports = class extends Alfred {
 }
 
 module.exports.Base = Alfred;
+module.exports.User = User;
