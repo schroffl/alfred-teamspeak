@@ -21,7 +21,7 @@
   "homepage": "https://github.com/schroffl/alfred-teamspeak#readme",
   "dependencies": {
     "async": "^1.5.2",
-    "exec-stack": "^1.0.0",
+    "exec-stack": "^1.1.0",
     "node-teamspeak": "^1.0.10"
   }
 }
