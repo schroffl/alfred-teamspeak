@@ -53,6 +53,9 @@ The Virtual Server ID
 Login with the specified name and password.
 Returns a promise which is being resolved on successful login and rejected on failure.
 
+#### <a name="method-send"></a>.send(command, *options*, *parameters*, *callback*)
+See [gwTumm/node-teamspeak](https://github.com/gwTumm/node-teamspeak)
+
 #### <a name="method-set"></a>.set(key, value)
 Set a bot-wide variable.
 
@@ -62,3 +65,14 @@ Get a bot-wide variable.
 #### <a name="method-use"></a>.use(*event*, eventHandler)
 Mount the specified eventHandler to the given event.
 If *event* is omitted, the handler will be called for any event.
+
+## <a name="events"></a>Events
+
+## Documentation
+
+- [User Interaction](docs/USER.md):  
+   By default the user-middleware is being loaded, though you can work around this with `require('alfred-teamspeak').Base`.
+   This module offers an interface to easier interact with users.
+
+- [Creating Middleware](docs/MIDDLEWARE.md)
+
