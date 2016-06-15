@@ -1,6 +1,6 @@
 {
   "name": "alfred-teamspeak",
-  "version": "3.0.2",
+  "version": "4.0.0",
   "description": "Teamspeak 3 Bot Framework",
   "main": "index.js",
   "scripts": {
