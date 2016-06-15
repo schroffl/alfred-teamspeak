@@ -4,7 +4,7 @@
   "description": "Teamspeak 3 Bot Framework",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node test/test.js"
   },
   "repository": {
     "type": "git",
@@ -20,8 +20,7 @@
   },
   "homepage": "https://github.com/schroffl/alfred-teamspeak#readme",
   "dependencies": {
-    "async": "^1.5.2",
-    "exec-stack": "^1.1.0",
-    "node-teamspeak": "^1.0.10"
+    "eventemitter2": "^1.0.3",
+    "teamspeak-query": "^1.1.0"
   }
 }
