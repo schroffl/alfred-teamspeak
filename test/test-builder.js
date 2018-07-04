@@ -1,9 +1,7 @@
 const Alfred = require('../index');
 const Builder = Alfred.Builder;
 
-const bot = new Alfred({
-    name: 'HD-Bot-Test',
-});
+const bot = new Alfred();
 
 bot.login('username', 'password')
     .then(() => bot.send('servernotifyregister', { 'event': 'server' }))
@@ -19,9 +17,9 @@ bot.on('clientleftview', data => console.log(data.user.get('name'), 'disconnecte
 
 bot.on('textmessage', data => {
     data.user.respond(Builder.bold("Hello world! " + Builder.underline("It's me " + Builder.italic("#HD"))));
-    var clid = data.user.get("clid");
-    var uid = data.user.get("uid");
-    var name = data.user.get("name");
+    let clid = data.user.get("clid");
+    let uid = data.user.get("uid");
+    let name = data.user.get("name");
     data.user.respond(Builder.url("https://www.google.com", "Click here to open google"));
     data.user.respond(Builder.color("ff0000", "I'm in red color."))
     data.user.poke(Builder.client(clid, uid, name));

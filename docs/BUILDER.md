@@ -14,9 +14,9 @@ console.log(Builder.bold("Hello World!"));
 # Bold / Underline / Italic Usage
 Send a message with format to the client.
 ```javascript
-var toBold = "Hello World ";
-var toUnderlineIt = "I'm using builder.";
-var message;
+let toBold = "Hello World ";
+let toUnderlineIt = "I'm using builder.";
+let message;
 message = Builder.bold(toBold + Builder.underline(toUnderlineIt));
 message = Builder.italic(message);
 user.respond(message); // send the message to the user
@@ -25,28 +25,28 @@ user.respond(message); // send the message to the user
 ## URL Usage
 Send a url message to the client.
 ```javascript
-var url = "https://github.com/schroffl/alfred-teamspeak";
-var text = "Github";
-var message = Builder.url(url, text);
+let url = "https://github.com/schroffl/alfred-teamspeak";
+let text = "Github";
+let message = Builder.url(url, text);
 user.respond(message);
 ```
 
 ## Client Usage
 Send a message with client data
 ```javascript
-var clid = user.get("clid");
-var uid = user.get("uid");
-var name = user.get("name");
-var message = Builder.client(clid, uid, name);
+let clid = user.get("clid");
+let uid = user.get("uid");
+let name = user.get("name");
+let message = Builder.client(clid, uid, name);
 user.respond(message);
 ```
 
 ## Color Usage
 Color a message and send it to the client.
 ```javascript
-var hex = "ff0000";
-var text = "I'm in red";
-var message = Builder.color(hex, text);
+let hex = "ff0000";
+let text = "I'm in red";
+let message = Builder.color(hex, text);
 user.respond(message);
 ```
 
