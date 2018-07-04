@@ -5,7 +5,7 @@ const bot = new Alfred({
     name: 'HD-Bot-Test',
 });
 
-bot.login('serveradmin', 'siikTTL3')
+bot.login('username', 'password')
     .then(() => bot.send('servernotifyregister', { 'event': 'server' }))
     .then(() => bot.send('servernotifyregister', { 'event': 'textprivate' }))
     .then(() => console.log('Connected with clid', bot.get('clid')))
