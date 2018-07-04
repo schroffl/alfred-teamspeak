@@ -71,5 +71,7 @@ So now if anyting user-related happens, you can respond to the users as easy as:
 bot.on('cliententerview', data => data.user.respond('Hello', data.user.get('name')) );
 ```
 
-Further documentation of the package can be found [here](docs/USER.md).
+Further documentation of the package can be found :
+- [User Docs](docs/USER.md).
+- [Builder Docs](docs/BUILDER.md)
 
