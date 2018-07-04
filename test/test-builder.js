@@ -21,6 +21,6 @@ bot.on('textmessage', data => {
     let uid = data.user.get("uid");
     let name = data.user.get("name");
     data.user.respond(Builder.url("https://www.google.com", "Click here to open google"));
-    data.user.respond(Builder.color("ff0000", "I'm in red color."))
+    data.user.respond(Builder.color("ff0000", "I'm in red color."));
     data.user.poke(Builder.client(clid, uid, name));
 });
