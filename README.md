@@ -73,5 +73,5 @@ bot.on('cliententerview', data => data.user.respond('Hello', data.user.get('name
 
 Further documentation of the package can be found :
 - [User Docs](docs/USER.md).
-- [Builder Docs](docs/BUILDER.md)
+- [Builder Docs](docs/BUILDER.md).
 

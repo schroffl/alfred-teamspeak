@@ -28,6 +28,7 @@ Send a url message to the client.
 var url = "https://github.com/schroffl/alfred-teamspeak";
 var text = "Github";
 var message = Builder.url(url, text);
+user.respond(message);
 ```
 
 ## Client Usage
@@ -37,6 +38,7 @@ var clid = user.get("clid");
 var uid = user.get("uid");
 var name = user.get("name");
 var message = Builder.client(clid, uid, name);
+user.respond(message);
 ```
 
 ## Color Usage
