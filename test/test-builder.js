@@ -16,11 +16,16 @@ bot.on('cliententerview', data => console.log(data.user.get('name'), 'connected'
 bot.on('clientleftview', data => console.log(data.user.get('name'), 'disconnected'));
 
 bot.on('textmessage', data => {
-    data.user.respond(Builder.bold("Hello world! " + Builder.underline("It's me " + Builder.italic("#HD"))));
-    let clid = data.user.get("clid");
-    let uid = data.user.get("uid");
-    let name = data.user.get("name");
-    data.user.respond(Builder.url("https://www.google.com", "Click here to open google"));
-    data.user.respond(Builder.color("ff0000", "I'm in red color."));
-    data.user.poke(Builder.client(clid, uid, name));
+    let msg = "" + data.msg;
+    console.log(JSON.stringify(data));
+    if (msg.startsWith("!exit")) {
+        bot.disconnect();
+        console.log("disconnected");
+    }
+    if (msg.startsWith("!kickserver")) {
+        data.user.serverKick(Builder.underline("Bye from the server!"));
+    }
+    if (msg.startsWith("!kickchannel")) {
+        data.user.channelKick(Builder.italic("bye have great day!"));
+    }
 });
