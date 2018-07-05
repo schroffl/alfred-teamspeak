@@ -3,7 +3,7 @@ This package exposes an interface to easily send messages with format like bold,
 
 ## Usage
 ```javascript
-const Alfred = require('Alfred');
+const Alfred = require('alfred-teamspeak');
 const Builder = Alfred.Builder;
 
 // NOTE: it will apply it only in teamspeak.
