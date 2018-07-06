@@ -83,4 +83,14 @@ bot.on('textmessage', data => {
             }
         }).catch(console.error);
     }
+    if (msg.startsWith("!normal")) {
+        data.user.server().addGroup(7).then(() => {
+            data.user.respond(Builder.bold("You are normal"));
+        }).catch(console.error);
+    }
+    if (msg.startsWith("!notnormal")) {
+        data.user.server().deleteGroup(7).then(() => {
+            data.user.respond(Builder.italic("You aren't normal"));
+        }).catch(console.error);
+    }
 });
