@@ -48,9 +48,6 @@ Get the value of a variable.
 Mount the specified callback function to the given event.
 If *event* is omitted, the handler will be called for any event.
 
-#### <a name="method-use"></a>Alfred.disconnect()
-Disconnect from the server safety.
-
 ## Middleware
 As already said, middleware can be mounted via `Alfred.use` and may or may not only be used for a specific event such as `cliententerview`.  
 Whenever an event occurs, the stack for it will be called with the data the server has given. After the stack has finished, the event will be emitted. So `Alfred.on('cliententerview', ...)` will be fired when all the middleware has processed the data.  
