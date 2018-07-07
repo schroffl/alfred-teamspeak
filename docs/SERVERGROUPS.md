@@ -107,3 +107,20 @@ bot.serverGroup().rename(sgid, name).then(res => {
 
 }).catch(console.error);
 ```
+
+## User Usage
+
+### Add Server Group using User
+- `sgid` The id of the server group
+```javascript
+user.server().addGroup(sgid).then(() => {
+
+}).catch(console.error);
+```
+### Remove Server Group using User
+- `sgid` The id of the server group
+```javascript
+user.server().deleteGroup(sgid).then(() => {
+
+}).catch(console.error);
+```
