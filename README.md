@@ -60,10 +60,32 @@ You can include like this:
 ```javascript
 const Alfred = require('alfred-teamspeak');
 const User = Alfred.User;
+const Builder = Alfred.Builder; // Message Builder
 
 const bot = new Alfred();
 
 bot.use(User);
+
+// Server Groups Manager
+bot.serverGroup().add(name)
+                 .addClient(sgid, cldbid)
+                 .addPermission(sgid, permname, permvalue, permnegated, permskip)
+                 .clientList(sgid)
+                 .copy(sgid, tsgid, name, type)
+                 .deleteClient(sgid, cldbid)
+                 .delete(sgid, force)
+                 .deletePermissions(sgid, perms)
+                 .list()
+                 .permissionsList(sgid)
+                 .rename(sgid, name);
+
+// Channels Manager
+bot.channel().list()
+             .info(cid)
+             .move(id, parentid, order)
+             .create(name, channel)
+             .delete(cid, force)
+             .edit(cid, channel);
 // [...]
 ```
 So now if anyting user-related happens, you can respond to the users as easy as:
@@ -73,5 +95,6 @@ bot.on('cliententerview', data => data.user.respond('Hello', data.user.get('name
 
 Further documentation of the package can be found :
 - [User Docs](docs/USER.md).
-- [Builder Docs](docs/BUILDER.md).
-- [ServerGroup Docs](docs/SERVERGROUPS.md).
+- [Message Builder Docs](docs/BUILDER.md).
+- [Server Groups Manager Docs](docs/SERVERGROUPS.md).
+- [Channels Manager Docs](docs/CHANNELS.md).
