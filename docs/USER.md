@@ -39,4 +39,11 @@ Moves the user into the specified channel.
 #### User.kick( *msg*, *type* )
 *msg* is the optional kick message. When *type* is set to `channel`, the user will only get kicked out of his current channel.
 
+#### User.server().addGroup( `sgid` )
+- `sgid` The id of the server group you want from server to give it to the client.
+
+#### User.server().deleteGroup( `sgid` )
+- `sgid` The if of the server group you want from server to remove it from the client.
+
+
 **NOTE:** More functionality will follow in the future.
