@@ -99,9 +99,7 @@ bot.on('textmessage', data => {
             topic: "Here's the topic",
             description: "Here's the description",
             password: "12345678",
-            maxclients: {
-                default: 64
-            },
+            maxclients: 64,
             flag: {
                 permanent: 1,
             },
