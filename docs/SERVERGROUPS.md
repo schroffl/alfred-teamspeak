@@ -1,4 +1,4 @@
-# Server Group Manager
+# Server Groups Manager
 This package exposes an interface to easily manage the server groups from your bot.
 
 ## Usage
