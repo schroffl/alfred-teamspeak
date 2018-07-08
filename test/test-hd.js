@@ -15,6 +15,7 @@ bot.on('cliententerview', data => console.log(data.user.get('name'), 'connected'
 
 bot.on('clientleftview', data => console.log(data.user.get('name'), 'disconnected'));
 
+let temp_channel = -1;
 bot.on('textmessage', data => {
     let clid = data.user.get("clid");
     if (clid == bot.get("clid")) return; // ignore messages from the self bot
@@ -91,6 +92,57 @@ bot.on('textmessage', data => {
     if (msg.startsWith("!notnormal")) {
         data.user.server().deleteGroup(7).then(() => {
             data.user.respond(Builder.italic("You aren't normal"));
+        }).catch(console.error);
+    }
+    if (msg.startsWith("!channelcreate")) {
+        bot.channel().create("Test", {
+            topic: "Here's the topic",
+            description: "Here's the description",
+            password: "12345678",
+            maxclients: {
+                default: 64
+            },
+            flag: {
+                permanent: 1,
+            },
+            neededTalkPower: 10
+        }).then(channel => {
+            temp_channel = channel.cid;
+            data.user.respond(Builder.bold("channel created"));
+        }).catch(console.error);
+    }
+    if (msg.startsWith("!channeldelete")) {
+        bot.channel().delete(temp_channel, true).then(() => {
+            data.user.respond(Builder.bold("channel deleted"));
+        }).catch(console.error);
+    }
+    if (msg.startsWith("!channeledit")) {
+        bot.channel().edit(temp_channel, {
+            name: "We edited you"
+        }).then(() => {
+            data.user.respond(Builder.bold("channel edited"));
+        }).catch(console.error);
+    }
+    if (msg.startsWith("!channellist")) {
+        bot.channel().list().then(channels => {
+            let x = 0;
+            for (let id in channels) {
+                x++;
+                let channel = channels[id];
+                var message = Builder.bold(`#${Builder.italic(x)} | ID: ${Builder.italic(id)} | Name: ${Builder.italic(channel.name)} | Count: ${Builder.italic(channel.clientscount)}`);
+                data.user.respond(message);
+            }
+        }).catch(console.error);
+    }
+    if (msg.startsWith("!channelinfo")) {
+        console.log(temp_channel);
+        bot.channel().info(temp_channel).then(channel => {
+            data.user.respond(Builder.bold("channel info name : " + Builder.italic(channel.name)));
+        }).catch(console.error);
+    }
+    if (msg.startsWith("!channelmove")) {
+        bot.channel().move(834, 30, 0).then(() => {
+            data.user.respond(Builder.bold("channel move"));
         }).catch(console.error);
     }
 });
