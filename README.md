@@ -64,6 +64,11 @@ const Builder = Alfred.Builder; // Message Builder
 
 const bot = new Alfred();
 
+// Message Builder
+let msg = new Alfred.Builder('Message: ').bold('my bold text').empty()
+            .text('with').color('#ff0000', 'some red stuff').text('.').empty()
+            .text("made by").empty().url("https://github.com/iHDeveloper", Builder.bold("iHDeveloper"));
+
 bot.use(User);
 
 // Server Groups Manager
