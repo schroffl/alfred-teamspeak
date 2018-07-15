@@ -60,8 +60,14 @@ You can include like this:
 ```javascript
 const Alfred = require('alfred-teamspeak');
 const User = Alfred.User;
+const Builder = Alfred.Builder; // Message Builder
 
 const bot = new Alfred();
+
+// Message Builder
+let msg = new Alfred.Builder('Message: ').bold('my bold text').empty()
+            .text('with').color('#ff0000', 'some red stuff').text('.').empty()
+            .text("made by").empty().url("https://github.com/iHDeveloper", Builder.bold("iHDeveloper"));
 
 bot.use(User);
 // [...]
@@ -71,5 +77,7 @@ So now if anyting user-related happens, you can respond to the users as easy as:
 bot.on('cliententerview', data => data.user.respond('Hello', data.user.get('name')) );
 ```
 
-Further documentation of the package can be found [here](docs/USER.md).
+Further documentation of the package can be found :
+- [User Docs](docs/USER.md).
+- [Builder Docs](docs/BUILDER.md).
 
