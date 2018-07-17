@@ -50,4 +50,15 @@ let message = Builder.color(hex, text);
 user.respond(message);
 ```
 
+## Image Usage
+Image as a message and send it to the client or put it in the description.
+```javascript
+let message = Builder.image("https://ihdeveloper.me/image.png");
+bot.channel().edit(cid, {
+    description: message, 
+}).then(() => {
+    // Successfully edited the channel
+}).catch(console.error);
+```
+
 **NOTE:** More functionality will follow in the future.
