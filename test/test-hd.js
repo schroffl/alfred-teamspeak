@@ -24,6 +24,14 @@ bot.on('textmessage', data => {
         bot.disconnect();
         console.log("disconnected");
     }
+    if (msg.startsWith("!clientslist")) {
+        bot.clientsList().then(users => {
+            data.user.respond("Clients list: -");
+            for (const user of users) {
+                data.user.respond(">>" + new Alfred.Builder().empty().bold(user.name));
+            }
+        }).catch(console.error);
+    }
     if (msg.startsWith("!kickserver")) {
         data.user.serverKick(Builder.underline("Bye from the server!"));
     }
