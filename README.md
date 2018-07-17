@@ -71,6 +71,17 @@ let msg = new Alfred.Builder('Message: ').bold('my bold text').empty()
 
 bot.use(User);
 
+// Clients list
+bot.clientsList().then(users => {
+    for (const user of users) {
+        console.log(user.name);
+        console.log(user.cid);
+        console.log(user.clid);
+        console.log(user.dbid);
+        console.log(user.type); // 1 = query, 0 = client
+    }
+}).catch(console.error);
+
 // Server Groups Manager
 bot.serverGroup().add(name)
                  .addClient(sgid, cldbid)
