@@ -3,7 +3,7 @@ This package exposes an interface to easily send messages with format like bold,
 
 ## Usage
 ```javascript
-const Alfred = require('Alfred');
+const Alfred = require('alfred-teamspeak');
 const Builder = Alfred.Builder;
 
 // NOTE: it will apply it only in teamspeak.
@@ -48,6 +48,17 @@ let hex = "ff0000";
 let text = "I'm in red";
 let message = Builder.color(hex, text);
 user.respond(message);
+```
+
+## Image Usage
+Image as a message and send it to the client or put it in the description.
+```javascript
+let message = Builder.image("https://ihdeveloper.me/image.png");
+bot.channel().edit(cid, {
+    description: message, 
+}).then(() => {
+    // Successfully edited the channel
+}).catch(console.error);
 ```
 
 **NOTE:** More functionality will follow in the future.
